@@ -9,7 +9,7 @@ import { carouselItems } from '@/data/carousel';
 import { tools } from '@/data/tools';
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => setIsDark(!isDark);
 

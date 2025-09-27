@@ -66,7 +66,7 @@ export default function GenerateSection({
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-lg text-gray-500 dark:text-gray-400">
                   {tool.description}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default function GenerateSection({
 
             
             <button
-              className={`ml-4 text-sm px-4 py-1 rounded-full font-medium transition-colors cursor-pointer ${
+              className={`ml-4 text- px-4 py-1 rounded-full font-medium transition-colors cursor-pointer ${
                 isDark
                   ? "bg-gray-700 text-gray-200 hover:bg-gray-600"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"

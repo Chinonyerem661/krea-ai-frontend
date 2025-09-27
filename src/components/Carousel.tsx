@@ -27,7 +27,7 @@ export default function Carousel({ items, isDark }: CarouselProps) {
 
   return (
     <div className="relative mb-12">
-      {/* Wrapper for carousel */}
+      
       <div className="flex space-x-0 md:space-x-13 overflow-hidden">
         {items.map((item, index) => (
           <div
@@ -37,7 +37,7 @@ export default function Carousel({ items, isDark }: CarouselProps) {
               transform: `translateX(-${currentSlide * 100}%)`
             }}
           >
-            {/* Card */}
+            
             <div
               className={`relative rounded-2xl overflow-hidden h-[20rem] sm:h-[28rem] md:h-[36rem] ${cardClasses} border`}
             >
@@ -49,17 +49,17 @@ export default function Carousel({ items, isDark }: CarouselProps) {
                 priority={index === 0}
               />
 
-              {/* Top-left tag */}
+              
               <div className="absolute top-2 left-2 sm:top-4 sm:left-4 text-[0.65rem] sm:text-xs text-white font-medium">
                 {item.tag}
               </div>
 
-              {/* Bottom content */}
+              
               <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6">
-                <h2 className="text-lg sm:text-2xl md:text-4xl font-bold mb-1 sm:mb-2">
+                <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2">
                   {item.title}
                 </h2>
-                <h3 className="text-sm sm:text-lg md:text-xl text-white font-semibold mb-2">
+                <h3 className="text-base sm:text-xl md:text-2xl text-white font-semibold mb-3">
                   {item.subtitle}
                 </h3>
 
@@ -67,7 +67,7 @@ export default function Carousel({ items, isDark }: CarouselProps) {
                   <p className="text-xs sm:text-sm text-white mb-3 sm:mb-0 max-w-full sm:max-w-md">
                     {item.description}
                   </p>
-                  <button className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white text-black rounded-full hover:bg-gray-300 cursor-pointer transition-colors text-xs sm:text-sm">
+                  <button className="px-4 py-2 sm:px-5 sm:py-2.5 bg-white text-black rounded-full hover:bg-gray-300 cursor-pointer transition-colors text-sm sm:text-base">
                     Try WAN 2.2
                   </button>
                 </div>
@@ -79,7 +79,7 @@ export default function Carousel({ items, isDark }: CarouselProps) {
 
       
       <div className="flex justify-center items-center mt-4 sm:mt-6 mb-16 sm:mb-28 space-x-4">
-        {/* Dots */}
+        
         <div className="flex space-x-2 sm:space-x-4 mr-2 sm:mr-4">
           {Array.from({ length: 9 }, (_, index) => (
             <button
@@ -92,7 +92,7 @@ export default function Carousel({ items, isDark }: CarouselProps) {
           ))}
         </div>
 
-        {/* Arrows */}
+        
         <div className="absolute right-2 sm:right-0 flex space-x-2">
           <button
             onClick={prevSlide}

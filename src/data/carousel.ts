@@ -1,7 +1,7 @@
 'use client';
 
 import { CarouselItem } from '@/types';
-import Image from 'next/image';
+
 
 export const carouselItems: CarouselItem[] = [
   {
