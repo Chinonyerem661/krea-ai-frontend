@@ -23,7 +23,6 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
   return (
     <header className="relative flex items-center justify-between px-6 py-4">
       <div className="flex items-center space-x-10">
-        
         <div className="flex items-center">
           <Image
             src={isDark ? "/k-logo-dark.png" : "/k-logo.png"}
@@ -33,7 +32,6 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             className="rounded-lg"
           />
 
-          
           <div className="hidden md:flex items-center space-x-2 ml-10 cursor-pointer">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-200 via-pink-400 to-purple-600 flex items-center justify-center"></div>
 
@@ -62,7 +60,6 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
           </div>
         </div>
 
-        
         <nav
           className={`absolute left-1/2 -translate-x-1/2 
               hidden md:flex items-center space-x-2 rounded-2xl h-14 px-4 mt-2
@@ -140,7 +137,6 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         </nav>
       </div>
 
-      
       <div className="hidden md:flex items-center space-x-4">
         <button className="flex items-center space-x-1 text-sm">
           <svg
@@ -205,12 +201,10 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         <div className="w-8 h-8 bg-gradient-to-r from-pink-200 via-pink-400 to-purple-600 rounded-full"></div>
       </div>
 
-      
       <button
         className="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-6 h-6"
@@ -227,20 +221,17 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         </svg>
       </button>
 
-      
       {menuOpen && (
         <div
           className={`absolute top-16 right-4 w-56 rounded-lg shadow-lg p-4 z-50 ${
             isDark ? "bg-gray-800/90 text-white" : "bg-gray-100/80 text-black"
           } md:hidden`}
         >
-          
           <div className="flex items-center space-x-2 mb-4 cursor-pointer">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-pink-200 via-pink-400 to-purple-600 flex items-center justify-center"></div>
             <span className="font-medium">benevolentalmond</span>
           </div>
 
-          
           <ul className="space-y-3">
             <li className="flex items-center space-x-2 cursor-pointer">
               <Home className="w-5 h-5" /> <span>Home</span>
@@ -265,7 +256,6 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             </li>
           </ul>
 
-          
           <div className="mt-4 space-y-2">
             <button className="w-full flex items-center justify-start space-x-2 text-sm">
               <span>Gallery</span>
@@ -277,8 +267,11 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               onClick={toggleTheme}
               className="w-full flex items-center justify-start space-x-2 text-sm"
             >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              
+              {isDark ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
             </button>
           </div>
         </div>

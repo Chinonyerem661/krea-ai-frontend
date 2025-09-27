@@ -47,19 +47,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* <footer className="bg-black text-white px-6 py-2 -mx-6">
-        <div className=" w-full flex items-center justify-between px-4">
-          <div className="flex items-center space-x-2">
-            <img src="/k-logo-dark.png" className="w-8 h-8" />
-            <span className="text-xl font-bold">Krea AI</span>
-          </div>
-          <div className="flex items-center text-lg text-gray-400">
-            <span>curated by</span>
-            <img src="/mobbin-icon.png" className="w-14 h-16" />
-            <span className="font-bold text-white">Mobbin</span>
-          </div>
-        </div>
-      </footer> */}
+     
     </div>
   );
 }
